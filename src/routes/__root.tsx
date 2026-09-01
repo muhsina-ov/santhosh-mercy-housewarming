@@ -73,12 +73,47 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Divine Dwelling - Housewarming Invitation" },
-      { name: "description", content: "Join us in celebrating our Housewarming & Thanksgiving service" },
-      { property: "og:title", content: "Divine Dwelling - Housewarming Invitation" },
-      { property: "og:description", content: "Join us in celebrating our Housewarming & Thanksgiving service" },
+      { title: "Santhosh & Mercy — Housewarming & Thanksgiving Invitation | புதுமனை புகுவிழா" },
+      {
+        name: "description",
+        content:
+          "Cordially inviting you and your family to the Housewarming & Thanksgiving celebration of R. Santhosh Kumar & M. Mercy Rani on Sunday, October 11, 2026 in Paithur, Attur, Salem.",
+      },
+      // OpenGraph / WhatsApp / Facebook
       { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://santhosh-mercy-housewarming.pages.dev" },
+      {
+        property: "og:title",
+        content: "Santhosh & Mercy — Housewarming & Thanksgiving Celebration | புதுமனை புகுவிழா",
+      },
+      {
+        property: "og:description",
+        content:
+          "Join us in celebrating our new home with God's blessings. Sunday, October 11, 2026 • Paithur, Salem.",
+      },
+      {
+        property: "og:image",
+        content: "https://santhosh-mercy-housewarming.pages.dev/images/og-image.jpg",
+      },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:alt", content: "Santhosh & Mercy Housewarming Invitation" },
+      // Twitter Card
       { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "Santhosh & Mercy — Housewarming & Thanksgiving Celebration",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Join us in celebrating our new home with God's blessings. Sunday, October 11, 2026 • Paithur, Salem.",
+      },
+      {
+        name: "twitter:image",
+        content: "https://santhosh-mercy-housewarming.pages.dev/images/og-image.jpg",
+      },
+      { name: "theme-color", content: "#0F1E36" },
     ],
     links: [
       {
