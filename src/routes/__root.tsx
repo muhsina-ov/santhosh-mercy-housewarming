@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       // OpenGraph / WhatsApp / Facebook
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://santhosh-mercy-housewarming.pages.dev" },
+      { property: "og:url", content: "https://santhosh-mercy-housewarming.invitingyou.top" },
       {
         property: "og:title",
         content: "Santhosh & Mercy — Housewarming & Thanksgiving Celebration | புதுமனை புகுவிழா",
@@ -93,8 +93,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         property: "og:image",
-        content: "https://santhosh-mercy-housewarming.pages.dev/images/og-image.jpg",
+        content: "https://santhosh-mercy-housewarming.invitingyou.top/images/og-image.jpg",
       },
+      {
+        property: "og:image:secure_url",
+        content: "https://santhosh-mercy-housewarming.invitingyou.top/images/og-image.jpg",
+      },
+      { property: "og:image:type", content: "image/jpeg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:alt", content: "Santhosh & Mercy Housewarming Invitation" },
@@ -111,7 +116,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         name: "twitter:image",
-        content: "https://santhosh-mercy-housewarming.pages.dev/images/og-image.jpg",
+        content: "https://santhosh-mercy-housewarming.invitingyou.top/images/og-image.jpg",
       },
       { name: "theme-color", content: "#0F1E36" },
     ],
