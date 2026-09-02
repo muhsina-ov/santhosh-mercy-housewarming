@@ -849,7 +849,7 @@ export function InvitationCard() {
 
               <div className="pt-1.5 space-y-1 text-lg font-semibold text-navy/90 sm:text-xl">
                 <p>S.M. Jenoel Raj</p>
-                <p>S.M. Joviya Antoinette</p>
+                <p>S.M. Joviya Antonietta</p>
               </div>
 
               <p className="pt-2 text-lg font-bold text-navy sm:text-2xl">
