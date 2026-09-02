@@ -830,23 +830,31 @@ export function InvitationCard() {
               </span>
             </div>
 
-            <div className="mt-6 space-y-3 font-serif-en text-navy">
+            <div className="mt-6 space-y-2.5 font-serif-en text-navy">
               <p className="text-lg font-bold text-navy sm:text-2xl">
+                (Late) B. Raja
+              </p>
+
+              <p className="text-lg font-bold text-navy sm:text-2xl">
+                R. Anjala Mary
+              </p>
+
+              <p className="text-lg font-bold text-navy sm:text-2xl">
+                R. Santhosh Kumar
+              </p>
+
+              <p className="text-lg font-bold text-navy sm:text-2xl">
+                M. Mercy Rani
+              </p>
+
+              <div className="pt-1.5 space-y-1 text-lg font-semibold text-navy/90 sm:text-xl">
+                <p>S.M. Jenoel Raj</p>
+                <p>S.M. Joviya Antoinette</p>
+              </div>
+
+              <p className="pt-2 text-lg font-bold text-navy sm:text-2xl">
                 Fr. R. Charles
               </p>
-
-              <p className="text-lg font-bold text-navy sm:text-2xl">
-                திருமதி. R. Anjala Mary
-              </p>
-
-              <p className="text-xl font-extrabold text-navy sm:text-3xl">
-                திரு. R. Santhosh Kumar &amp; திருமதி. M. Mercy Rani
-              </p>
-
-              <div className="pt-2 space-y-1 text-lg font-semibold text-navy/90 sm:text-xl">
-                <p>S.M. Jenoel Raj</p>
-                <p>S.M. Joviya Antoinetta</p>
-              </div>
             </div>
 
             {/* 3D Embossed Gold Wax Seal with Pulsing Halo */}
