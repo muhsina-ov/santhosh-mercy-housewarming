@@ -179,12 +179,14 @@ function ScheduleItem({
   titleEn,
   desc,
   icon,
+  blessingBy,
 }: {
   time: string;
   titleTamil: string;
   titleEn: string;
   desc: string;
   icon: string;
+  blessingBy?: string;
 }) {
   return (
     <div className="relative flex items-start gap-4 pb-6 last:pb-0 group">
@@ -201,7 +203,13 @@ function ScheduleItem({
         <p className="font-serif-en text-xs font-semibold text-navy/70 tracking-wide uppercase">
           {titleEn}
         </p>
-        <p className="mt-1 font-tamil text-xs leading-relaxed text-navy/85 sm:text-sm">
+        {blessingBy && (
+          <div className="mt-1.5 inline-flex items-center gap-1.5 rounded-md border border-gold/50 bg-gold/15 px-2.5 py-1 font-serif-en text-xs font-bold text-navy shadow-xs">
+            <span className="text-gold">✝</span>
+            <span>Blessing By : {blessingBy}</span>
+          </div>
+        )}
+        <p className="mt-1.5 font-tamil text-xs leading-relaxed text-navy/85 sm:text-sm">
           {desc}
         </p>
       </div>
@@ -518,20 +526,23 @@ export function InvitationCard() {
             </figure>
           </section>
 
-          {/* Mother Mary Intercession & Invitation Message */}
+          {/* Holy Family Intercession & Invitation Message */}
           <section className="rise mt-8 rounded-xl border border-gold/50 bg-ivory/90 p-5 shadow-md backdrop-blur-sm sm:p-6">
             <div className="grid items-center gap-6 md:grid-cols-12">
               <div className="flex flex-col items-center md:col-span-4">
                 <div className="relative">
                   <div className="absolute -inset-1.5 rounded-2xl bg-gold/40 blur-sm" />
                   <img
-                    src="/images/mary-jesus-blessing.webp"
-                    alt="Our Lady with Infant Jesus — Mother Mary Blessing"
-                    className="relative h-48 w-36 rounded-xl border-2 border-gold object-cover shadow-lg sm:h-56 sm:w-44"
+                    src="/images/holy-family-blessing.webp"
+                    alt="Holy Family of Nazareth — Jesus, Mary and Joseph"
+                    className="relative h-52 w-36 rounded-xl border-2 border-gold object-cover shadow-lg sm:h-60 sm:w-44"
                   />
                 </div>
-                <span className="mt-2 text-center font-tamil text-xs text-navy/70">
-                  அன்னை மரியாள் ஆசீர்வாதம்
+                <span className="mt-2 text-center font-tamil text-xs font-semibold text-navy/80">
+                  திருக்குடும்ப ஆசீர்வாதம்
+                </span>
+                <span className="text-center font-serif-en text-[11px] text-navy/60 uppercase tracking-wider">
+                  The Holy Family
                 </span>
               </div>
 
@@ -561,21 +572,24 @@ export function InvitationCard() {
             </div>
           </section>
 
-          {/* Purely Christian House Dedication & Blessing Prayer */}
+          {/* Sacred Heart of Jesus — House Dedication & Blessing Prayer */}
           <section className="rise mt-8 overflow-hidden rounded-xl border border-gold/50 bg-ivory/90 shadow-md backdrop-blur-sm">
             <div className="grid items-center gap-6 p-5 sm:grid-cols-12 sm:p-6">
               <div className="flex flex-col items-center sm:col-span-4">
                 <div className="relative">
                   <div className="absolute -inset-2 rounded-2xl bg-gold/30 blur-md" />
                   <img
-                    src="/images/golden-cross.webp"
-                    alt="Holy Christian Crucifix — Divine Blessing"
-                    className="relative h-48 w-48 rounded-2xl border-2 border-gold object-cover shadow-xl sm:h-52 sm:w-52"
+                    src="/images/sacred-heart-jesus.webp"
+                    alt="Sacred Heart of Jesus — Divine Blessing"
+                    className="relative h-52 w-40 rounded-2xl border-2 border-gold object-cover shadow-xl sm:h-60 sm:w-48"
                     loading="lazy"
                   />
                 </div>
-                <span className="mt-2 text-center font-serif-en text-xs font-semibold tracking-wider text-navy/70 uppercase">
-                  Christ the Cornerstone
+                <span className="mt-2 text-center font-tamil text-xs font-semibold text-navy/80">
+                  இயேசுவின் திரு இருதயம்
+                </span>
+                <span className="text-center font-serif-en text-[11px] text-navy/60 uppercase tracking-wider">
+                  Sacred Heart of Jesus
                 </span>
               </div>
               <div className="text-center sm:col-span-8 sm:text-left">
@@ -607,6 +621,45 @@ export function InvitationCard() {
             </div>
           </section>
 
+          {/* The Good Shepherd Blessing & Psalm 23 */}
+          <section className="rise mt-8 overflow-hidden rounded-xl border border-gold/50 bg-ivory/90 shadow-md backdrop-blur-sm">
+            <div className="grid items-center gap-6 p-5 sm:grid-cols-12 sm:p-6">
+              <div className="flex flex-col items-center sm:col-span-4">
+                <div className="relative">
+                  <div className="absolute -inset-2 rounded-2xl bg-gold/30 blur-md" />
+                  <img
+                    src="/images/good-shepherd-jesus.webp"
+                    alt="The Good Shepherd — Lord Jesus Christ"
+                    className="relative h-52 w-36 rounded-2xl border-2 border-gold object-cover shadow-xl sm:h-60 sm:w-44"
+                    loading="lazy"
+                  />
+                </div>
+                <span className="mt-2 text-center font-tamil text-xs font-semibold text-navy/80">
+                  நல்ல ஆயன் இயேசு
+                </span>
+                <span className="text-center font-serif-en text-[11px] text-navy/60 uppercase tracking-wider">
+                  The Good Shepherd
+                </span>
+              </div>
+              <div className="text-center sm:col-span-8 sm:text-left">
+                <span className="rounded-full bg-navy/10 px-3 py-1 font-tamil text-xs font-bold text-gold">
+                  திருப்பாடல் 23 ✦ Psalm of Grace
+                </span>
+                <h3 className="mt-2 font-tamil text-lg font-bold text-navy sm:text-xl">
+                  “ஆண்டவரே என் ஆயர்; எனக்கேதும் குறையில்லை”
+                </h3>
+                <p className="mt-1 font-tamil text-xs italic text-navy/70 sm:text-sm">
+                  — திருப்பாடல்கள் 23:1 (Psalm 23:1)
+                </p>
+                <div className="my-3 h-px w-full bg-gradient-to-r from-gold/50 via-gold to-transparent" />
+                <p className="font-tamil text-sm leading-7 text-navy/90 sm:text-base sm:leading-8">
+                  பசுமையான புல்வெளிகளில் எங்களை இளைப்பாறச் செய்து,
+                  அமைதியான நீர்நிலைகளுக்கு எங்களை வழிநடத்தும் நல்ல ஆயனின் அன்பும் ஆசீரும் என்றும் நம் அனைவரோடும் இருப்பதாக!
+                </p>
+              </div>
+            </div>
+          </section>
+
           {/* Ceremony Timeline & Program */}
           <section className="rise mt-8 rounded-xl border border-gold/50 bg-ivory/90 p-5 shadow-md backdrop-blur-sm sm:p-6">
             <div className="text-center mb-6">
@@ -624,7 +677,8 @@ export function InvitationCard() {
                 icon="✝"
                 titleTamil="இல்ல ஆசீர்வாத செபம்"
                 titleEn="House Blessing & Thanksgiving Prayer"
-                desc="இறைவனின் அருளாசியோடு திருப்பலியும், புதிய இல்லத்தின் ஆசீர்வாத வழிபாடும் நடைபெறும்."
+                blessingBy="Fr. R. Charles"
+                desc="இறைவனின் அருளாசியோடு, புதிய இல்லத்தின் ஆசீர்வாத வழிபாடு நடைபெறும்."
               />
               <ScheduleItem
                 time="10:30 AM"
@@ -776,9 +830,20 @@ export function InvitationCard() {
               </span>
             </div>
 
-            <div className="mt-5 space-y-1.5 font-serif-en text-lg font-bold text-navy sm:text-2xl">
-              <p className="text-navy">திரு. R. Santhosh Kumar &amp; திருமதி M. Mercy Rani</p>
-              <div className="pt-1 font-serif-en text-base font-semibold text-navy/80 sm:text-lg">
+            <div className="mt-6 space-y-3 font-serif-en text-navy">
+              <p className="text-lg font-bold text-navy sm:text-2xl">
+                Fr. R. Charles
+              </p>
+
+              <p className="text-lg font-bold text-navy sm:text-2xl">
+                திருமதி. R. Anjala Mary
+              </p>
+
+              <p className="text-xl font-extrabold text-navy sm:text-3xl">
+                திரு. R. Santhosh Kumar &amp; திருமதி. M. Mercy Rani
+              </p>
+
+              <div className="pt-2 space-y-1 text-lg font-semibold text-navy/90 sm:text-xl">
                 <p>S.M. Jenoel Raj</p>
                 <p>S.M. Joviya Antoinetta</p>
               </div>
