@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { GoldenDust } from "./GoldenDust";
+import { BgmPlayer } from "./BgmPlayer";
 
 function RoseWindow({ className = "" }: { className?: string }) {
   const petals = Array.from({ length: 12 });
@@ -203,26 +204,26 @@ export function DoorReveal({ children }: { children: ReactNode }) {
     window.setTimeout(() => setState("open"), 2300);
   };
 
-  if (state === "open") return <>{children}</>;
-
   return (
     <div className="relative">
+      <BgmPlayer autoPlayTrigger={state === "opening" || state === "open"} />
       {children}
 
-      <div
-        role="button"
-        tabIndex={0}
-        onClick={open}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") open();
-        }}
-        aria-label="அழைப்பிதழைத் திறக்க — Tap to open the invitation"
-        className={`fixed inset-0 z-50 cursor-pointer overflow-hidden select-none ${opening ? "veil-out" : ""}`}
-        style={{
-          background:
-            "radial-gradient(120% 90% at 50% 55%, color-mix(in oklab, var(--navy) 70%, black), color-mix(in oklab, var(--navy) 30%, black) 70%, black)",
-        }}
-      >
+      {state !== "open" && (
+        <div
+          role="button"
+          tabIndex={0}
+          onClick={open}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" || e.key === " ") open();
+          }}
+          aria-label="அழைப்பிதழைத் திறக்க — Tap to open the invitation"
+          className={`fixed inset-0 z-50 cursor-pointer overflow-hidden select-none ${opening ? "veil-out" : ""}`}
+          style={{
+            background:
+              "radial-gradient(120% 90% at 50% 55%, color-mix(in oklab, var(--navy) 70%, black), color-mix(in oklab, var(--navy) 30%, black) 70%, black)",
+          }}
+        >
         <Dust />
         <GoldenDust className="pointer-events-none absolute inset-0 z-10" />
 
@@ -307,6 +308,7 @@ export function DoorReveal({ children }: { children: ReactNode }) {
           </span>
         </div>
       </div>
+      )}
     </div>
   );
 }
